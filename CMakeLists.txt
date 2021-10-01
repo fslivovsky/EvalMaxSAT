@@ -38,7 +38,7 @@ else()
 
 
 	FOREACH (localLib ${localLibs})
-		include_directories (lib/${localLib}/src)
+		target_include_directories (${localLib} PUBLIC "lib/${localLib}/src")
 	ENDFOREACH(localLib)
 
 	set(LIB_LINK
